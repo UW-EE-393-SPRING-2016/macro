@@ -1,0 +1,37 @@
+Sub Macro2()
+'
+' Macro2 Macro
+'
+'
+    Selection.Font.Name = "Times New Roman"
+    With ActiveDocument.PageSetup
+        .LineNumbering.Active = False
+        .TopMargin = CentimetersToPoints(0.75)
+        .BottomMargin = CentimetersToPoints(1.44)
+        .LeftMargin = CentimetersToPoints(0.63)
+        .RightMargin = CentimetersToPoints(0.64)
+        .Gutter = CentimetersToPoints(0)
+        .HeaderDistance = CentimetersToPoints(1.25)
+        .FooterDistance = CentimetersToPoints(1.25)
+        .SectionStart = wdSectionNewPage
+        .OddAndEvenPagesHeaderFooter = False
+        .DifferentFirstPageHeaderFooter = False
+        .VerticalAlignment = wdAlignVerticalTop
+        .SuppressEndnotes = False
+        .MirrorMargins = False
+    End With
+    With Selection.ParagraphFormat
+        .LeftIndent = CentimetersToPoints(0)
+        .RightIndent = CentimetersToPoints(0)
+        .SpaceBeforeAuto = False
+        .SpaceAfterAuto = False
+        .Alignment = wdAlignParagraphJustify
+        .WidowControl = True
+        .KeepWithNext = False
+        .KeepTogether = False
+        .PageBreakBefore = False
+        .NoLineNumber = False
+        .Hyphenation = True
+        .FirstLineIndent = CentimetersToPoints(0)
+    End With
+End Sub
